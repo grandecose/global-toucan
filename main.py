@@ -2,6 +2,7 @@ on = 1;
 a = -9.800000000000
 print("Welcome to Global Toucan, a physics calculator.\n");
 valid = "Please choose a valid option\n";
+#I've never been good at commenting, if you can't understand whats going on contact me and I will help.
 while(on == 1):
 	a = -9.800000000000000000000000
 	choice = raw_input("What equation would like to find?\n1. Final Velocity\n2. Distance\n3. Time\n4. Help\n5. List Equations\n6. Quit\n")
@@ -47,7 +48,27 @@ while(on == 1):
 			print valid
 
 	elif(choice == "2"):
-		print valid
+		choice = raw_input("What do you want to find?\n1. Distance\n2. Initial Velocity\n3. Acceleration\n4. Time\n");
+		# d = vi * t + (.5 * a * (t ** 2)) 
+		if(choice == "1"):
+			vi = int(input("What is your initial velocity?\n"))
+			
+			t = int(input("What is the time?\n"))
+			
+			d = vi * 1.00000000000000000 * t + (.5 * a * (t ** 2))
+
+			print("This object has travelled %s meters" % d);
+
+		elif(choice == "2"):
+			print "debug!\n"
+			print valid
+		elif(choice == "3"):
+			print valid
+		elif(choice == "4"):
+			print valid
+		else:
+			print valid
+
 	elif(choice == "3"):
 		print valid
 
@@ -60,7 +81,7 @@ while(on == 1):
 		raw_input("Press enter when you are ready to return to the main menu.\n");
 		
 	elif(choice == "6"):
-		jdfhks = raw_input("Global Toucan will now exit, please press enter.")
+		raw_input("Global Toucan will now exit, please press enter.")
 		on = 0;
 
 	else:
